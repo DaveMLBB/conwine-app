@@ -1,14 +1,15 @@
-package it.conwine.android;
+package it.conwine.android.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import it.conwine.android.R;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,6 +23,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         initializeComponents();
+
+        register.setOnClickListener(this);
+        login.setOnClickListener(this);
     }
 
     private void initializeComponents() {
@@ -42,6 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.textView_Register:
                 switchOnRegister();
+                break;
         }
     }
 

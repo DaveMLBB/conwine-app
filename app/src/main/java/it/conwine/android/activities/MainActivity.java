@@ -1,15 +1,16 @@
-package it.conwine.android;
+package it.conwine.android.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import it.conwine.android.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,10 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initializateComponents();
         getSupportActionBar();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        initializateComponents();
+
+        login.setOnClickListener(this);
+        register.setOnClickListener(this);
+
     }
 
     private void initializateComponents() {
@@ -51,9 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.textView_login:
                 switchOnLogin();
                 break;
-            default:
-                
-                break;        
+
                 
         }
 
