@@ -60,7 +60,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button_register"
+        android:id="@+id/button_loginuser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/passwordlayout"
@@ -68,7 +68,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:background="@color/cerasuolo"
-        android:text="Register"
+        android:text="Login"
         android:textColor="@color/white"
         android:theme="@style/Theme.Conwine" />
 
@@ -77,7 +77,7 @@
         android:layout_height="wrap_content"
         android:text="Not Registered | Create your Account"
         android:textSize="16dp"
-        android:layout_below="@+id/button_register"
+        android:layout_below="@+id/button_loginuser"
         android:gravity="center_horizontal"
         android:layout_marginTop="15dp"
         android:id="@+id/textView_Register"
