@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar();
+        getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         login.setOnClickListener(this);
         register.setOnClickListener(this);
-
     }
 
     private void initializateComponents() {
@@ -41,11 +40,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lastName = findViewById(R.id.editText_lastName);
         password = findViewById(R.id.editText_password);
         login = findViewById(R.id.textView_login);
-
-
-
+        register =findViewById(R.id.button_register);
     }
 
+    private void switchOnLogin() {
+
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public void onClick(View view) {
@@ -57,15 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.textView_login:
                 switchOnLogin();
                 break;
-
-                
         }
-
-    }
-
-    private void switchOnLogin() {
-
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-        startActivity(intent);
     }
 }
